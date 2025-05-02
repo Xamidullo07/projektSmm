@@ -6,14 +6,14 @@ const HeroSection = () => {
   return (
     <div className="relative min-h-screen flex items-center pt-20">
       {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <img
           // src={imgbg}
           alt="Hero background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
-      </div>
+      </div> */}
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
