@@ -26,7 +26,7 @@ const HomePage = () => {
       {/* About section */}
       <section className="section">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="relative">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -48,9 +48,9 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="absolute -bottom-8 -right-8 bg-card p-6 rounded-xl border border-border shadow-lg max-w-xs"
+                className="absolute -bottom-4 -right-8 bg-card p-6 rounded-xl border border-border shadow-lg max-w-sm"
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-5">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <span className="text-primary text-xl font-bold">50+</span>
                   </div>

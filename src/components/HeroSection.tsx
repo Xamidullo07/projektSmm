@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import imgbg from "../img/img.jpg";
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center pt-20">
+    <div className="relative min-h-screen flex items-center md:pt-20 pt-0">
       {/* Background image with overlay */}
       {/* <div className="absolute inset-0 z-0">
         <img
