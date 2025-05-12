@@ -10,7 +10,7 @@ const HeroSection = () => {
         <img
           src={imgbg}
           alt="Hero background"
-          className="w-full h-full object-cover block lg:hidden relative top-[-10px]"
+          className="w-full h-full object-cover block lg:hidden transform -translate-y-4 scale-99"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
       </div>
