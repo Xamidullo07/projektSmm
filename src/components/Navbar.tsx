@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface NavbarProps {
@@ -15,7 +15,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glassmorphism py-3" : "bg-transparent py-4"
+        isScrolled ? "glassmorphism py-3" : "glassmorphism bg-transparent py-4"
       }`}
     >
       <div className="container flex items-center justify-between">
@@ -93,9 +93,9 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden glassmorphism"
+          className="md:hidden bg-transparent"
         >
-          <div className="container py-4 space-y-4">
+          <div className="container bg-transparent  py-4 space-y-4">
             <NavLink
               to="/"
               className={({ isActive }) =>
