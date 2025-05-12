@@ -1,13 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  MessageSquare,
-  Clock,
-  Calendar,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import ContactForm from "../components/ContactForm";
 
 const ContactPage = () => {
@@ -78,7 +71,7 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-medium mb-1">Ish vaqti</h3>
                   <p className="text-muted-foreground">
-                    Dushanba - Juma: 9:t00 - 18:00
+                    Dushanba - Juma: 9:00 - 18:00
                   </p>
                 </div>
               </div>
