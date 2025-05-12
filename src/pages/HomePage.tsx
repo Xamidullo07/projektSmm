@@ -48,7 +48,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="absolute -bottom-4 -right-8 bg-card p-6 rounded-xl border border-border shadow-lg max-w-sm"
+                className="absolute -bottom-4 overflow-hidden -right-4 bg-card p-4 rounded-xl border border-border shadow-lg max-w-[360px]"
               >
                 <div className="flex items-center gap-4 mb-5">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
