@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import {
   Play,
   Book,
-  FileText,
   Clock,
   CheckCircle,
   User,
   Settings,
   LogOut,
-  Lock,
 } from "lucide-react";
 import { courses } from "../data/courses";
 
