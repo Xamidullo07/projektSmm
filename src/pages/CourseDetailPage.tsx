@@ -1,11 +1,22 @@
-import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Play, Clock, Calendar, BookOpen, Award, MessageSquare, Shield } from 'lucide-react';
-import { courses } from '../data/courses';
+import { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import {
+  ArrowRight,
+  CheckCircle,
+  Play,
+  Clock,
+  Calendar,
+  BookOpen,
+  Award,
+  MessageSquare,
+  Shield,
+  Video,
+} from "lucide-react";
+import { courses } from "../data/courses";
 
 const CourseDetailPage = () => {
   const { courseId } = useParams<{ courseId: string }>();
-  const course = courses.find(c => c.id === Number(courseId));
+  const course = courses.find((c) => c.id === Number(courseId));
 
   useEffect(() => {
     // Update page title
@@ -39,11 +50,13 @@ const CourseDetailPage = () => {
                   {course.level}
                 </span>
               </div>
-              
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4">{course.title}</h1>
-              
+
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+                {course.title}
+              </h1>
+
               <p className="text-muted-foreground mb-6">{course.description}</p>
-              
+
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2">
                   <Clock size={18} className="text-muted-foreground" />
@@ -51,14 +64,14 @@ const CourseDetailPage = () => {
                     {course.duration} davomiyligi
                   </span>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   <Calendar size={18} className="text-muted-foreground" />
                   <span className="text-muted-foreground">
                     Doimiy kirish huquqi
                   </span>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   <BookOpen size={18} className="text-muted-foreground" />
                   <span className="text-muted-foreground">
@@ -66,25 +79,27 @@ const CourseDetailPage = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <Link to={`/checkout/${course.id}`} className="btn btn-primary">
                   <span>Sotib olish</span>
                   <ArrowRight size={16} className="ml-1" />
                 </Link>
-                
+
                 <div>
                   <p className="text-muted-foreground text-sm">Narxi</p>
-                  <p className="text-xl font-semibold">{course.price.toLocaleString()} so'm</p>
+                  <p className="text-xl font-semibold">
+                    {course.price.toLocaleString()} so'm
+                  </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src={course.image} 
-                  alt={course.title} 
+                <img
+                  src={course.image}
+                  alt={course.title}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent flex items-center justify-center">
@@ -97,45 +112,54 @@ const CourseDetailPage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Course content */}
       <div className="container py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold mb-6">Kurs haqida</h2>
-            
+
             <div className="prose prose-invert max-w-none mb-10">
               <p>
-                {course.fullDescription || 
-                  "Bu kurs sizga SMM sohasida professional darajaga erishish uchun zarur bo'lgan barcha bilim va ko'nikmalarni beradi. Kursda nazariy ma'lumotlar bilan bir qatorda amaliy mashg'ulotlar ham mavjud bo'lib, ular orqali o'rganilgan bilimlarni mustahkamlashingiz mumkin."
-                }
+                {course.fullDescription ||
+                  "Bu kurs sizga SMM sohasida professional darajaga erishish uchun zarur bo'lgan barcha bilim va ko'nikmalarni beradi. Kursda nazariy ma'lumotlar bilan bir qatorda amaliy mashg'ulotlar ham mavjud bo'lib, ular orqali o'rganilgan bilimlarni mustahkamlashingiz mumkin."}
               </p>
-              
+
               <p>
-                Kurs davomida siz ijtimoiy tarmoqlar marketingining asosiy tamoyillari, kontent yaratish, targetlangan reklama, SMM strategiyasini ishlab chiqish va natijalarni tahlil qilish usullari bilan tanishasiz.
+                Kurs davomida siz ijtimoiy tarmoqlar marketingining asosiy
+                tamoyillari, kontent yaratish, targetlangan reklama, SMM
+                strategiyasini ishlab chiqish va natijalarni tahlil qilish
+                usullari bilan tanishasiz.
               </p>
             </div>
-            
-            <h3 className="text-xl font-bold mb-4">Kursda nimalarni o'rganasiz</h3>
-            
+
+            <h3 className="text-xl font-bold mb-4">
+              Kursda nimalarni o'rganasiz
+            </h3>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {course.features.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle size={18} className="text-primary mt-1 flex-shrink-0" />
+                  <CheckCircle
+                    size={18}
+                    className="text-primary mt-1 flex-shrink-0"
+                  />
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
-            
+
             <h3 className="text-xl font-bold mb-4">Darslar ro'yxati</h3>
-            
+
             <div className="space-y-4 mb-10">
               {course.lessons.map((lesson, index) => (
                 <div key={index} className="card p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-primary text-sm">{index + 1}</span>
+                        <span className="text-primary text-sm">
+                          {index + 1}
+                        </span>
                       </div>
                       <h4 className="font-medium">{lesson.title}</h4>
                     </div>
@@ -146,25 +170,28 @@ const CourseDetailPage = () => {
                 </div>
               ))}
             </div>
-            
+
             <h3 className="text-xl font-bold mb-4">Kimlar uchun</h3>
-            
+
             <div className="prose prose-invert max-w-none mb-10">
               <ul>
                 <li>SMMga qiziqqan yoshlar va mutaxassislar</li>
                 <li>Frilanser bo'lishni xohlaganlar</li>
-                <li>O'z biznesini ijtimoiy tarmoqlarda targ'ib qilmoqchi bo'lganlar</li>
+                <li>
+                  O'z biznesini ijtimoiy tarmoqlarda targ'ib qilmoqchi
+                  bo'lganlar
+                </li>
                 <li>Marketing bo'limida ishlaydigan xodimlar</li>
                 <li>Digital marketing sohasiga qiziqqan har qanday inson</li>
               </ul>
             </div>
           </div>
-          
+
           <div>
             <div className="card sticky top-24">
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-6">Kurs afzalliklari</h3>
-                
+
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1">
@@ -177,7 +204,7 @@ const CourseDetailPage = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1">
                       <BookOpen size={18} className="text-primary" />
@@ -189,7 +216,7 @@ const CourseDetailPage = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1">
                       <MessageSquare size={18} className="text-primary" />
@@ -201,7 +228,7 @@ const CourseDetailPage = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1">
                       <Award size={18} className="text-primary" />
@@ -213,7 +240,7 @@ const CourseDetailPage = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1">
                       <Shield size={18} className="text-primary" />
@@ -226,7 +253,7 @@ const CourseDetailPage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <Link
                   to={`/checkout/${course.id}`}
                   className="btn btn-primary w-full"

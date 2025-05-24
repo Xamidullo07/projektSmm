@@ -1,13 +1,15 @@
-import { CourseType } from '../types';
+import { CourseType } from "../types";
 
 export const courses: CourseType[] = [
   {
     id: 1,
-    title: "SMM sohasini 0 dan o'rganish",
-    description: "Ijtimoiy tarmoqlarda professional SMM kampaniyalarini yaratish va yuritishni o'rganing",
-    image: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "STANDART",
+    description:
+      "To’liq Online kursga 3 oy muddatga dostup, Yordam tizimi, Uy vazifalarni tekshirish, Sertifikat",
+    image:
+      "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     price: 1200000,
-    level: "Boshlang'ich",
+    level: "STANDART",
     duration: "8 hafta",
     lessonsCount: 48,
     features: [
@@ -16,7 +18,7 @@ export const courses: CourseType[] = [
       "Mijozlar bilan ishlash usullari",
       "Kontent-plan tuzish",
       "Ijtimoiy tarmoqlar tahlili",
-      "Biznes akkauntlarni optimallash"
+      "Biznes akkauntlarni optimallash",
     ],
     lessons: [
       { title: "SMM asoslari va zamonaviy trendlar", duration: "45 daqiqa" },
@@ -26,100 +28,19 @@ export const courses: CourseType[] = [
       { title: "Instagram marketing asoslari", duration: "65 daqiqa" },
       { title: "Facebook marketing", duration: "55 daqiqa" },
       { title: "Telegram va YouTube", duration: "50 daqiqa" },
-      { title: "TikTok va zamonaviy platformalar", duration: "45 daqiqa" }
-    ]
+      { title: "TikTok va zamonaviy platformalar", duration: "45 daqiqa" },
+    ],
   },
+
   {
     id: 2,
-    title: "Instagram marketing to'liq kurs",
-    description: "Instagram orqali biznesingizni rivojlantirish va mijozlar bazasini kengaytirish strategiyasi",
-    image: "https://images.pexels.com/photos/6157056/pexels-photo-6157056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    price: 950000,
-    level: "O'rta",
-    duration: "6 hafta",
-    lessonsCount: 36,
-    features: [
-      "Akkaunt optimizatsiyasi",
-      "Algoritm bilan ishlash",
-      "Kontent strategiyasi",
-      "Reels, Stories va IGTV",
-      "Instagram Ads",
-      "Statistika tahlili va o'sish strategiyasi"
-    ],
-    lessons: [
-      { title: "Instagram algoritmi haqida", duration: "45 daqiqa" },
-      { title: "Akkauntni to'g'ri sozlash", duration: "40 daqiqa" },
-      { title: "Professional bio yozish", duration: "35 daqiqa" },
-      { title: "Kontent yaratish asoslari", duration: "55 daqiqa" },
-      { title: "Reels kontentlari", duration: "50 daqiqa" },
-      { title: "Instagram Ads so'zlashamiz", duration: "60 daqiqa" },
-      { title: "Stories va IGTV", duration: "45 daqiqa" },
-      { title: "Statistikani tahlil qilish", duration: "50 daqiqa" }
-    ]
-  },
-  {
-    id: 3,
-    title: "Facebook targetlangan reklama",
-    description: "Facebook Ads Manager orqali samarali reklama kampaniyalarini yaratish va boshqarish",
-    image: "https://images.pexels.com/photos/4350225/pexels-photo-4350225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "GOLD",
+    description:
+      "Standartdagi barchasi,6 oy muddatga dostup, Offline uchrashuv 1 soat, individual yordam , ish topishga yordam",
+    image:
+      "https://images.pexels.com/photos/267371/pexels-photo-267371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     price: 850000,
-    level: "Professional",
-    duration: "4 hafta",
-    lessonsCount: 24,
-    features: [
-      "Facebook Ads Manager",
-      "Reklama kampaniyalari yaratish",
-      "Maqsadli auditoriyani tanlash",
-      "A/B testlash usullari",
-      "Facebook Pixels o'rnatish",
-      "ROI ni kuzatish va optimallash"
-    ],
-    lessons: [
-      { title: "Facebook Ads Manager bilan tanishuv", duration: "50 daqiqa" },
-      { title: "Maqsadlar va kampaniyalar", duration: "55 daqiqa" },
-      { title: "Auditoriya tanlash", duration: "45 daqiqa" },
-      { title: "Reklama matnlari yozish", duration: "40 daqiqa" },
-      { title: "Kreativlarni tayyorlash", duration: "50 daqiqa" },
-      { title: "A/B testlash", duration: "45 daqiqa" },
-      { title: "Facebook Pixel o'rnatish", duration: "60 daqiqa" },
-      { title: "Natijalarni tahlil qilish", duration: "55 daqiqa" }
-    ]
-  },
-  {
-    id: 4,
-    title: "Kontent marketing Express",
-    description: "Har qanday biznes uchun samarali kontent strategiyasini ishlab chiqish va amalga oshirish",
-    image: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    price: 700000,
-    level: "O'rta",
-    duration: "3 hafta",
-    lessonsCount: 18,
-    features: [
-      "Kontent strategiyasi",
-      "Kontent turlarini aniqlash",
-      "Kontentni режалаштириш",
-      "SEO asoslari",
-      "Storytelling usullari",
-      "Kontent kalendari yaratish"
-    ],
-    lessons: [
-      { title: "Kontent marketing strategiyasi", duration: "55 daqiqa" },
-      { title: "Kontent turlari", duration: "45 daqiqa" },
-      { title: "Target auditoriya va kontent", duration: "40 daqiqa" },
-      { title: "Storytelling usullari", duration: "50 daqiqa" },
-      { title: "Vizual kontent", duration: "45 daqiqa" },
-      { title: "Tekstli kontent", duration: "40 daqiqa" },
-      { title: "Kontent kalendari", duration: "35 daqiqa" },
-      { title: "Natijalarni o'lchash", duration: "50 daqiqa" }
-    ]
-  },
-  {
-    id: 5,
-    title: "Telegram marketing",
-    description: "Telegram kanallari va botlari orqali biznesingizni rivojlantirish va ularni monetizatsiya qilish",
-    image: "https://images.pexels.com/photos/267371/pexels-photo-267371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    price: 850000,
-    level: "Boshlang'ich",
+    level: "GOLD",
     duration: "4 hafta",
     lessonsCount: 24,
     features: [
@@ -128,7 +49,7 @@ export const courses: CourseType[] = [
       "Auditoriyani jalb qilish usullari",
       "Kanallar monetizatsiyasi",
       "Reklama joylashtirish va sotish",
-      "Telegram Analytics"
+      "Telegram Analytics",
     ],
     lessons: [
       { title: "Telegram asoslari", duration: "40 daqiqa" },
@@ -138,16 +59,18 @@ export const courses: CourseType[] = [
       { title: "Obunachi yig'ish usullari", duration: "55 daqiqa" },
       { title: "Bot yaratish", duration: "60 daqiqa" },
       { title: "Kanaldan pul ishlash", duration: "45 daqiqa" },
-      { title: "Analytics va tahlil", duration: "40 daqiqa" }
-    ]
+      { title: "Analytics va tahlil", duration: "40 daqiqa" },
+    ],
   },
   {
-    id: 6,
-    title: "TikTok marketing",
-    description: "TikTok algoritmi bilan ishlash va viral kontent yaratish orqali biznes auditoriyasini kengaytirish",
-    image: "https://images.pexels.com/photos/5326965/pexels-photo-5326965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: 3,
+    title: "FOYDALI DARSLAR",
+    description:
+      "Siz uchun qo'shimcha foydaliy darslar, sizni o'sishingiz uchun ko'mak bo'ladi degan umitda siz uchun",
+    image:
+      "https://images.pexels.com/photos/5326965/pexels-photo-5326965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     price: 950000,
-    level: "O'rta",
+    level: "V.I.P",
     duration: "5 hafta",
     lessonsCount: 30,
     features: [
@@ -156,7 +79,7 @@ export const courses: CourseType[] = [
       "TikTok Ads Manager",
       "Virallik strategiyasi",
       "Influencerlar bilan ishlash",
-      "TikTok marketing kampaniyalari"
+      "TikTok marketing kampaniyalari",
     ],
     lessons: [
       { title: "TikTok marketing asoslari", duration: "45 daqiqa" },
@@ -166,7 +89,345 @@ export const courses: CourseType[] = [
       { title: "Video yaratish", duration: "55 daqiqa" },
       { title: "TikTok Ads", duration: "60 daqiqa" },
       { title: "Influencer marketing", duration: "45 daqiqa" },
-      { title: "Analytics va tahlil", duration: "40 daqiqa" }
-    ]
-  }
+      { title: "Analytics va tahlil", duration: "40 daqiqa" },
+    ],
+  },
+];
+export const courseModules = [
+  {
+    id: 1,
+    title: "1-MODUL.",
+    lessons: [
+      {
+        id: "1",
+        title: "1-dars Kurs haqida",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "2",
+        title: "2-dars Copywriterlik",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "3",
+        title: "3-dars Telegramga kirish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "4",
+        title: "4-dars Telegram kanal ochish va guruh ochish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "5",
+        title: "5-dars Telegramda post joylash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "6",
+        title: "6-dars Livegramda Chat bot yasash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "7",
+        title: "7-dars Controller bot yasash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "8",
+        title: "8-dars Telegraf yasash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "9",
+        title: "9-dars Telegram Ads orqali reklama yoqish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "2-MODUL.",
+    lessons: [
+      {
+        id: "1",
+        title: "1-dars Instagram akkaunt ochish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "2",
+        title: "2-dars Instagram akkauntni biznes akkauntga o'tkazish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "3",
+        title: "3-dars Instagram akkauntni upakovka qilish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "4",
+        title: "4-dars Instagram akkauntnga publikatsiya qo'yish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "5",
+        title: "5-dars Instagram akkauntga stories qo'yish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "6",
+        title: "6-dars HighLight qo’yish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "7",
+        title: "7-dars Instagram akkauntdan Targeting yoqish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "8",
+        title: "8-dars Instagram mavzusini yakunlash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "9",
+        title: "9-dars Instagram full",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "10",
+        title: "10-dars Instagram kompyuter orqali reklama yoqish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    title: "3-MODUL.",
+    lessons: [
+      {
+        id: "1",
+        title: "1-dars Facebook sahifa ochish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "2",
+        title: "2-dars Facebookdan foydalanish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "3",
+        title: "3-dars Facebook Ads sozlash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "4",
+        title: "4-dars Facebook LID reklama yoqish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "5",
+        title: "5-dars Uyga vazifada yo’l qo’yilgan xatolar",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "6",
+        title: "6-dars Facebook Messages reklama yoqish - Instagram varianti",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "7",
+        title: "7-dars Facebook Messages reklama yoqish - Facebook varianti",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "8",
+        title: "8-dars Facebook Traffik reklama yoqish - 1",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "9",
+        title: "9-dars Facebook Traffik reklama yoqish - 2",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "10",
+        title: "10-dars Facebook Traffik reklama yoqish - 3",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "11",
+        title: "11-dars Facebook blok holatiga tushsa yechish usuli",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "12",
+        title: "12-dars Facebook ADS menejer darsi tugatish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "13",
+        title: "13-dars Facebook yakuniy dars",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "14",
+        title: "14-dars Facebook Telefondan reklama yoqish",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    title: "4-MODUL.",
+    lessons: [
+      {
+        id: "1",
+        title: "1-dars TikTok akkaunt biznes o'tkazish va video yuklash",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "2",
+        title:
+          "2-dars Portfolio yaratish PPT orqali va Kontent plan tuzish, Konkurentlar analizi",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "3",
+        title: "3-dars Marketing - 1",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "4",
+        title: "4-dars Marketing - 2",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "5",
+        title: "5-dars Marketing to’liq",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    title: "5-MODUL.",
+    lessons: [
+      {
+        id: "1",
+        title: "1-dars Google Account ochish (HD tinniq format)",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "2",
+        title: "2-dars Google Drivega kirish qismi (HD format)",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "3",
+        title: "3-dars Google Forma yasash, so'rovnoma uchun (HD format)",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "4",
+        title: "4-dars Cheklist yasash (HD format)",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "5",
+        title: "5-dars Driveda Papka ochish va ichiga joylash (HD format)",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "6",
+        title: "6-dars Qo'shimcha ma'lumotlar va yakuniy dars (HD format)",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+    ],
+  },
+
+  {
+    id: 6,
+    title: "6-MODUL.",
+    lessons: [
+      {
+        id: "1",
+        title: "YouTube 1-dars",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "2",
+        title: "YouTube 2-dars",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "3",
+        title: "YouTube 3-dars",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "4",
+        title: "YouTube 4-dars",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+      {
+        id: "5",
+        title: "YouTube 5-dars",
+        duration: "07:16",
+        videoUrl: "/src/videos/lesson1.mp4",
+      },
+    ],
+  },
 ];

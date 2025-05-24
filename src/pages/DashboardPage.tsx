@@ -8,6 +8,7 @@ import {
   User,
   Settings,
   LogOut,
+  Eye,
 } from "lucide-react";
 import { courses } from "../data/courses";
 

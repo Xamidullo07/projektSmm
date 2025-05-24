@@ -49,23 +49,24 @@ const CourseCard = ({ course }: CourseCardProps) => {
         <div className="flex items-center justify-between pt-4 border-t border-border">
           <div>
             <p className="text-muted-foreground text-sm">Narxi</p>
+            {/* <p> {course.price1.toLocaleString()} so'm</p> */}
             <p className="text-xl font-semibold">
               {course.price.toLocaleString()} so'm
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <Link
+            {/* <Link
               to={`/courses/${course.id}`}
               className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
             >
               Batafsil
-            </Link>
+            </Link> */}
             <Link
-              to={`/checkout/${course.id}`}
+              to={`/courses/${course.id}`}
               className="btn btn-primary py-2 px-4"
             >
-              <span>Sotib olish</span>
+              <span>Barafsil</span>
               <ArrowRight size={16} className="ml-1" />
             </Link>
           </div>

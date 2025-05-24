@@ -6,6 +6,7 @@ export interface CourseType {
   image: string;
   price: number;
   level: string;
+  // price1: number;
   duration: string;
   lessonsCount: number;
   features: string[];
@@ -24,4 +25,10 @@ export interface TestimonialType {
   rating: number;
   comment: string;
   course: string;
+}
+
+export interface currentModule {
+  id: number;
+  title: string;
+  duration: number;
 }

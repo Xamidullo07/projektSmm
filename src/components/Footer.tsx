@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, Send, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-card pt-16 pb-8 pl-[10px] pr-[10px]">
+    <footer className="bg-card  pt-16 pb-8 pl-[10px] pr-[10px]">
       <div className="container">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
