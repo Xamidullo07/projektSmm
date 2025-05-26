@@ -1,17 +1,25 @@
-export interface CourseType {
+export type CourseType = {
   id: number;
   title: string;
   description: string;
   fullDescription?: string;
-  image: string;
   price: number;
-  level: string;
-  // price1: number;
+  image: string;
   duration: string;
+  level: string;
   lessonsCount: number;
   features: string[];
-  lessons: LessonType[];
-}
+
+  modules: {
+    title: string;
+    lessons: {
+      id: number;
+      title: string;
+      duration: string;
+      videoUrl?: string;
+    }[];
+  }[];
+};
 
 export interface LessonType {
   title: string;

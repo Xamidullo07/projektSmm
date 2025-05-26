@@ -1,3 +1,4 @@
+// importlar o'zgarmagan
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
@@ -19,11 +20,9 @@ const CourseDetailPage = () => {
   const course = courses.find((c) => c.id === Number(courseId));
 
   useEffect(() => {
-    // Update page title
     if (course) {
       document.title = `${course.title} - Abdulloh SMM`;
     }
-    // Scroll to top on page load
     window.scrollTo(0, 0);
   }, [course]);
 
@@ -64,14 +63,12 @@ const CourseDetailPage = () => {
                     {course.duration} davomiyligi
                   </span>
                 </div>
-
                 <div className="flex items-center gap-2">
                   <Calendar size={18} className="text-muted-foreground" />
                   <span className="text-muted-foreground">
                     Doimiy kirish huquqi
                   </span>
                 </div>
-
                 <div className="flex items-center gap-2">
                   <BookOpen size={18} className="text-muted-foreground" />
                   <span className="text-muted-foreground">
@@ -85,7 +82,6 @@ const CourseDetailPage = () => {
                   <span>Sotib olish</span>
                   <ArrowRight size={16} className="ml-1" />
                 </Link>
-
                 <div>
                   <p className="text-muted-foreground text-sm">Narxi</p>
                   <p className="text-xl font-semibold">
@@ -122,14 +118,12 @@ const CourseDetailPage = () => {
             <div className="prose prose-invert max-w-none mb-10">
               <p>
                 {course.fullDescription ||
-                  "Bu kurs sizga SMM sohasida professional darajaga erishish uchun zarur bo'lgan barcha bilim va ko'nikmalarni beradi. Kursda nazariy ma'lumotlar bilan bir qatorda amaliy mashg'ulotlar ham mavjud bo'lib, ular orqali o'rganilgan bilimlarni mustahkamlashingiz mumkin."}
+                  "Bu kurs sizga SMM sohasida professional darajaga erishish uchun zarur bo'lgan barcha bilim va ko'nikmalarni beradi."}
               </p>
-
               <p>
                 Kurs davomida siz ijtimoiy tarmoqlar marketingining asosiy
-                tamoyillari, kontent yaratish, targetlangan reklama, SMM
-                strategiyasini ishlab chiqish va natijalarni tahlil qilish
-                usullari bilan tanishasiz.
+                tamoyillari, kontent yaratish, target reklama va boshqalarni
+                o'rganasiz.
               </p>
             </div>
 
@@ -140,49 +134,65 @@ const CourseDetailPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {course.features.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle
-                    size={18}
-                    className="text-primary mt-1 flex-shrink-0"
-                  />
+                  <CheckCircle size={18} className="text-primary mt-1" />
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
 
+            {/* === Darslar Ro'yxati === */}
+            {/* === Darslar Ro'yxati === */}
             <h3 className="text-xl font-bold mb-4">Darslar ro'yxati</h3>
 
             <div className="space-y-4 mb-10">
-              {course.lessons.map((lesson, index) => (
-                <div key={index} className="card p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-primary text-sm">
-                          {index + 1}
-                        </span>
+              {course.modules?.map((module, moduleIndex) => (
+                <div
+                  key={moduleIndex}
+                  className="border rounded-lg overflow-hidden"
+                >
+                  <details className="group">
+                    <summary className="flex items-center justify-between bg-muted px-4 py-3 cursor-pointer hover:bg-muted/70">
+                      <div className="flex items-center gap-2 font-medium">
+                        <BookOpen size={18} className="text-primary" />
+                        <span>{module.title}</span>
                       </div>
-                      <h4 className="font-medium">{lesson.title}</h4>
+                      <span className="group-open:rotate-180 transition-transform">
+                        <ArrowRight size={16} />
+                      </span>
+                    </summary>
+
+                    <div className="bg-background">
+                      {module.lessons.map((lesson, lessonIndex) => (
+                        <Link
+                          key={lessonIndex}
+                          to={`/course/${course.id}/lesson/${moduleIndex}/${lessonIndex}`}
+                          className="flex items-center justify-between px-6 py-3 border-t hover:bg-muted/50"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center">
+                              <span className="text-primary text-sm">
+                                {lessonIndex + 1}
+                              </span>
+                            </div>
+                            <span>{lesson.title}</span>
+                          </div>
+                          <span className="text-sm text-muted-foreground">
+                            {lesson.duration}
+                          </span>
+                        </Link>
+                      ))}
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      {lesson.duration}
-                    </div>
-                  </div>
+                  </details>
                 </div>
               ))}
             </div>
 
             <h3 className="text-xl font-bold mb-4">Kimlar uchun</h3>
-
             <div className="prose prose-invert max-w-none mb-10">
               <ul>
-                <li>SMMga qiziqqan yoshlar va mutaxassislar</li>
+                <li>SMMga qiziqqanlar</li>
                 <li>Frilanser bo'lishni xohlaganlar</li>
-                <li>
-                  O'z biznesini ijtimoiy tarmoqlarda targ'ib qilmoqchi
-                  bo'lganlar
-                </li>
-                <li>Marketing bo'limida ishlaydigan xodimlar</li>
-                <li>Digital marketing sohasiga qiziqqan har qanday inson</li>
+                <li>Marketingni chuqur o'rganmoqchi bo'lganlar</li>
               </ul>
             </div>
           </div>

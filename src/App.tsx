@@ -8,9 +8,11 @@ import RegisterPage from "./pages/RegisterPage";
 import DashboardPage from "./pages/DashboardPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
-import AboutCoursesPage from "./pages/AboutCoursesPage";
+import LessonDetailPage from "./pages/LessonDetailPage";
+// import LessonDetailPage from "./pages/LessonDetailPage";
+// import AboutCoursesPage from "./pages/AboutCoursesPage";
 // import CourseSidebar from "./components/CourseSidebar";
-import LessonPage from "./pages/LessonPage";
+// import LessonPage from "./pages/LessonPage";
 
 function App() {
   return (
@@ -24,9 +26,10 @@ function App() {
         <Route path="dashboard" element={<DashboardPage />} />
         <Route path="checkout/:courseId" element={<CheckoutPage />} />
         <Route path="contact" element={<ContactPage />} />
-        <Route path="aboutcourses" element={<AboutCoursesPage />} />
-        {/* <Route path="cor" element={<CourseSidebar />} /> */}
-        <Route path="/lesson/:id" element={<LessonPage />} />
+        <Route
+          path="/course/:courseId/lesson/:moduleIndex/:lessonIndex"
+          element={<LessonDetailPage />}
+        />
       </Route>
     </Routes>
   );
