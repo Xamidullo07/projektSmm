@@ -216,7 +216,7 @@ const DashboardPage = () => {
                     </h3>
 
                     <div className="space-y-4">
-                      {enrolledCourses[0].lessons
+                      {enrolledCourses[0].modules[0].lessons
                         .slice(0, 3)
                         .map((lesson, index) => (
                           <div key={index} className="card p-4">

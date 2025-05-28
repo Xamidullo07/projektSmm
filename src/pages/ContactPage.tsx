@@ -1,7 +1,16 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Clock,
+  Facebook,
+  Youtube,
+  Instagram,
+} from "lucide-react";
 import ContactForm from "../components/ContactForm";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -88,7 +97,9 @@ const ContactPage = () => {
                   className="flex items-center gap-3 p-3 bg-muted rounded-lg hover:bg-primary/10 transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-lg font-bold">T</span>
+                    <span className="text-primary text-lg font-bold">
+                      <FaTelegramPlane size={24} color="##13443B" />
+                    </span>
                   </div>
                   <span>Telegram</span>
                 </a>
@@ -100,7 +111,9 @@ const ContactPage = () => {
                   className="flex items-center gap-3 p-3 bg-muted rounded-lg hover:bg-primary/10 transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-lg font-bold">I</span>
+                    <span className="text-primary text-lg font-bold">
+                      <Instagram size={20} />
+                    </span>
                   </div>
                   <span>Instagram</span>
                 </a>
@@ -112,7 +125,9 @@ const ContactPage = () => {
                   className="flex items-center gap-3 p-3 bg-muted rounded-lg hover:bg-primary/10 transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-lg font-bold">F</span>
+                    <span className="text-primary text-lg font-bold">
+                      <Facebook size={20} />
+                    </span>
                   </div>
                   <span>Facebook</span>
                 </a>
@@ -124,7 +139,9 @@ const ContactPage = () => {
                   className="flex items-center gap-3 p-3 bg-muted rounded-lg hover:bg-primary/10 transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-lg font-bold">Y</span>
+                    <span className="text-primary text-lg font-bold">
+                      <Youtube size={20} />
+                    </span>
                   </div>
                   <span>YouTube</span>
                 </a>

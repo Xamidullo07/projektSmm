@@ -18,7 +18,6 @@ const LessonDetailPage = () => {
     Number(moduleIndex)
   );
 
-  // Eslatmalar
   const noteKey = `note-${courseId}-${moduleIndex}-${lessonIndex}`;
   const [note, setNote] = useState("");
   const [savedNote, setSavedNote] = useState("");
@@ -39,7 +38,6 @@ const LessonDetailPage = () => {
     );
   }
 
-  // Keyingi dars yo'li
   const nextLessonIndex = Number(lessonIndex) + 1;
   const nextModuleIndex = Number(moduleIndex) + 1;
   const isLastLesson = nextLessonIndex >= currentModule.lessons.length;
@@ -53,11 +51,10 @@ const LessonDetailPage = () => {
   }
 
   return (
-    <div className="pt-16 h-screen overflow-hidden bg-[#0f0f0f] text-white flex">
+    <div className="pt-16 h-screen overflow-hidden bg-[#0f0f0f] text-white flex flex-col lg:flex-row">
       {/* Sidebar */}
-      <div className="w-[300px] bg-[#1c1c1c] h-full overflow-y-auto border-r border-gray-800">
+      <div className="w-full lg:w-[300px] bg-[#1c1c1c] h-[300px] lg:h-full overflow-y-auto border-r border-gray-800">
         <div className="p-4 pt-8 text-sm font-semibold">STANDART</div>
-
         {course.modules.map((mod, modIndex) => (
           <div key={modIndex} className="border-b border-gray-800">
             <button
@@ -106,7 +103,7 @@ const LessonDetailPage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col p-6 overflow-y-auto">
+      <div className="flex-1 flex flex-col p-4 overflow-y-auto">
         <Link
           to={`/course/${courseId}`}
           className="text-sm text-gray-400 mb-2 hover:underline flex items-center"
@@ -115,16 +112,16 @@ const LessonDetailPage = () => {
           Kursga qaytish
         </Link>
 
-        <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg mb-4">
+        {/* Video Component */}
+        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4 bg-black relative">
           <video
             src={currentLesson.videoUrl}
             controls
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
           />
         </div>
 
-        {/* Yonma-yon info + tugma */}
-        <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 text-sm text-gray-400 gap-2">
           <div className="space-x-4">
             <span>📚 Modul: {currentModule.title}</span>
             <span>🎓 Kurs: {course.title}</span>
@@ -134,18 +131,18 @@ const LessonDetailPage = () => {
           {nextLessonPath && (
             <Link
               to={nextLessonPath}
-              className="px-4 py-3 bg-[#00FFD4] hover:bg-[#00ddbb] text-black font-semibold text-xs rounded"
+              className="px-4 py-2 bg-[#00FFD4] hover:bg-[#00ddbb] text-black font-semibold text-xs rounded"
             >
               Keyingi dars
             </Link>
           )}
         </div>
 
-        <h1 className="text-2xl font-bold">{currentLesson.title}</h1>
+        <h1 className="text-2xl font-bold mb-2">{currentLesson.title}</h1>
       </div>
 
-      {/* Notes */}
-      <div className="w-[300px] bg-[#1c1c1c] h-full border-l border-gray-800 p-4 flex flex-col">
+      {/* Notes Panel */}
+      <div className="w-full lg:w-[300px] bg-[#1c1c1c] h-[300px] lg:h-full border-t lg:border-t-0 lg:border-l border-gray-800 p-4 flex flex-col">
         <h2 className="text-xl font-bold mb-4">Eslatmalar</h2>
         <div className="flex-1 overflow-y-auto text-gray-400 whitespace-pre-wrap mb-2">
           {savedNote || "Eslatmalar yo'q"}
