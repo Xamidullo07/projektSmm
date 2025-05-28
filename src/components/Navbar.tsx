@@ -20,17 +20,11 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <motion.div
-            whileHover={{ rotate: 5 }}
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10"
-          >
-            <span className="text-primary font-montserrat font-bold text-lg">
-              A
-            </span>
-          </motion.div>
-          <span className="font-montserrat font-bold text-xl">
-            Abdulloh<span className="text-primary">SMM</span>
-          </span>
+          <img
+            className="w-[180px]"
+            src="../../public/ABDULLOH.png"
+            alt="icon"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -138,14 +132,14 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             <div className="flex flex-col pt-3 border-t border-border gap-3">
               <Link
                 to="/login"
-                className="btn btn-outline py-2"
+                className="btn btn-outline py-0"
                 onClick={() => setIsOpen(false)}
               >
                 Kirish
               </Link>
               <Link
                 to="/register"
-                className="btn btn-primary py-2"
+                className="btn btn-primary py-0"
                 onClick={() => setIsOpen(false)}
               >
                 Ro'yxatdan o'tish

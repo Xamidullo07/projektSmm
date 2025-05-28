@@ -8,14 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
-                <span className="text-primary font-montserrat font-bold text-lg">
-                  A
-                </span>
+              <div className=" w-[180px] ">
+                <img src="../../public/ABDULLOH.png" alt="" />
               </div>
-              <span className="font-montserrat font-bold text-xl">
-                Abdulloh<span className="text-primary">SMM</span>
-              </span>
             </Link>
             <p className="text-muted-foreground mb-6">
               SMM sohasida professional mutaxassis bo'lishingiz uchun eng yaxshi
