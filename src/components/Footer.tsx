@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Send, Twitter } from "lucide-react";
+import logofooter from "../../public/ABDULLOH.png";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
               <div className=" w-[180px] ">
-                <img src="../../public/ABDULLOH.png" alt="" />
+                <img src={logofooter} alt="" />
               </div>
             </Link>
             <p className="text-muted-foreground mb-6">
