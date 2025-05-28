@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import navlogo from "../../public/ABDULLOH.png";
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -20,11 +21,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img
-            className="w-[180px]"
-            src="../../public/ABDULLOH.png"
-            alt="icon"
-          />
+          <img className="w-[180px]" src={navlogo} alt="icon" />
         </Link>
 
         {/* Desktop Navigation */}
