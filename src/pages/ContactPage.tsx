@@ -91,7 +91,7 @@ const ContactPage = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="https://t.me/abdullohsayfuddinov"
+                  href="https://t.me/ab_studio_bot"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 bg-muted rounded-lg hover:bg-primary/10 transition-colors"

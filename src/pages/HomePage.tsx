@@ -186,7 +186,7 @@ const HomePage = () => {
                         href="mailto:info@abdullohsmm.uz"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        info@abdullohsmm.uz
+                        abdullohsayfuddinov4@gmail.com
                       </a>
                     </div>
                   </div>
@@ -201,7 +201,7 @@ const HomePage = () => {
                         href="tel:+998901234567"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +998 90 123 45 67
+                        +998 94 651 55 88
                       </a>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ const HomePage = () => {
                     <div>
                       <h4 className="font-medium mb-1">Manzil</h4>
                       <p className="text-muted-foreground">
-                        Toshkent, O'zbekiston
+                        Toshkent sh, Olmazor tumani, Oltinsoy 43
                       </p>
                     </div>
                   </div>
@@ -243,7 +243,7 @@ const HomePage = () => {
                   </p>
 
                   <a
-                    href="https://t.me/abdulloh_sayfuddinov"
+                    href="https://t.me/ab_studio_bot"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline w-full"
