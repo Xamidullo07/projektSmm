@@ -140,21 +140,23 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Aloqa</h3>
             <ul className="space-y-3">
-              <li className="text-muted-foreground">Toshkent, O'zbekiston</li>
+              <li className="text-muted-foreground">
+                Toshkent sh, Olmazor tumani, Oltinsoy 43
+              </li>
               <li>
                 <a
-                  href="tel:+998901234567"
+                  href="tel:+998946515588"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  +998 90 123 45 67
+                  +998 94 651 55 88
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@abdullohsmm.uz"
+                  href="mailto:abdullohsayfuddinov4@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  info@abdullohsmm.uz
+                  abdullohsayfuddinov4@gmail.com
                 </a>
               </li>
             </ul>

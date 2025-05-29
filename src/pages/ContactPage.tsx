@@ -40,10 +40,10 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-medium mb-1">Email</h3>
                   <a
-                    href="mailto:info@abdullohsmm.uz"
+                    href="mailto:abdullohsayfuddinov4@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info@abdullohsmm.uz
+                    abdullohsayfuddinov4@gmail.com
                   </a>
                 </div>
               </div>
@@ -55,10 +55,10 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-medium mb-1">Telefon</h3>
                   <a
-                    href="tel:+998901234567"
+                    href="tel:+998946515588"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +998 90 123 45 67
+                    +998 94 651 55 88
                   </a>
                 </div>
               </div>
@@ -69,7 +69,9 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Manzil</h3>
-                  <p className="text-muted-foreground">Toshkent, O'zbekiston</p>
+                  <p className="text-muted-foreground">
+                    Toshkent sh, Olmazor tumani, Oltinsoy 43
+                  </p>
                 </div>
               </div>
 
@@ -80,7 +82,7 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-medium mb-1">Ish vaqti</h3>
                   <p className="text-muted-foreground">
-                    Dushanba - Juma: 9:00 - 18:00
+                    Dushanba - Shanba: 9:00 - 18:00
                   </p>
                 </div>
               </div>
