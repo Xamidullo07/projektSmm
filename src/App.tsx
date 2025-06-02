@@ -9,6 +9,12 @@ import DashboardPage from "./pages/DashboardPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
 import LessonDetailPage from "./pages/LessonDetailPage";
+import AdminLayout from "./components/admin/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminCourses from "./pages/admin/AdminCourses";
+import AdminUsers from "./pages/admin/AdminUsers";
+import AdminPayments from "./pages/admin/AdminPayments";
+import AdminSettings from "./pages/admin/AdminSettings";
 // import LessonDetailPage from "./pages/LessonDetailPage";
 // import AboutCoursesPage from "./pages/AboutCoursesPage";
 // import CourseSidebar from "./components/CourseSidebar";
@@ -30,6 +36,14 @@ function App() {
           path="/course/:courseId/lesson/:moduleIndex/:lessonIndex"
           element={<LessonDetailPage />}
         />
+      </Route>
+
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<AdminDashboard />} />
+        <Route path="courses" element={<AdminCourses />} />
+        <Route path="users" element={<AdminUsers />} />
+        <Route path="payments" element={<AdminPayments />} />
+        <Route path="settings" element={<AdminSettings />} />
       </Route>
     </Routes>
   );
