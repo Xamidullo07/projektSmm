@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -17,6 +17,7 @@ const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const sidebarRef = useRef<HTMLDivElement>(null);
 
   const menuItems = [
     { title: "Dashboard", icon: <LayoutDashboard size={20} />, path: "/admin" },
@@ -42,10 +43,28 @@ const AdminLayout = () => {
     navigate("/login");
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isSidebarOpen &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSidebarOpen]);
+
   return (
     <div className="min-h-screen bg-background flex">
       {/* Sidebar */}
       <aside
+        ref={sidebarRef}
         className={`fixed lg:static top-0 left-0 z-40 h-screen w-64 transition-transform bg-card border-r border-border
           ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -79,7 +98,7 @@ const AdminLayout = () => {
                     ? "bg-primary/10 text-primary"
                     : "hover:bg-muted text-foreground"
                 }`}
-                onClick={() => setIsSidebarOpen(false)} // close on mobile click
+                onClick={() => setIsSidebarOpen(false)}
               >
                 {item.icon}
                 <span>{item.title}</span>
